@@ -1,0 +1,46 @@
+m=int(input("Enter the number of rows"))
+n=int(input("Enter the number of columns"))
+matrix=[]
+for  i in range(m):
+    temp=[]
+    for j in range(n):
+        e = int(input("Enter the no.:"))
+        temp.append(e)
+    matrix.append(temp)
+
+for i in range(m):
+    for j in range(n):
+        print(matrix[i][j], end = " ")
+    print()
+
+#print(matrix)
+con=0
+o=int(input("Enter the number of rows"))
+p=int(input("Enter the number of columns"))
+matrix2=[]
+matrix3=[]
+matrix4=[]
+
+if(o==m and p==n):
+    for  i in range(o):
+        temp2=[]
+        for j in range(p):
+            r = int(input("Enter the no.:"))
+            temp2.append(r)
+        matrix2.append(temp2)
+        matrix3.append(temp2)
+    for i in range(o):
+        for j in range(p):
+            print(matrix2[i][j], end = " ")
+            con+=1
+        print()
+    if(con==(o*p)):
+        print("Addition of both matrices are: ")
+        for i in range(o):
+            for j in range(p):
+                matrix3[i][j]=matrix[i][j]+matrix2[i][j]
+                print(matrix3[i][j], end= " ")
+            print()
+else:
+    print("Error!")
+
